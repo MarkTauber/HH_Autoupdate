@@ -44,8 +44,10 @@ while 1==1:
     try:
         myElem = WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#HH-React-Root > div > div.HH-MainContent.HH-Supernova-MainContent > div.main-content > div > div > div.bloko-column.bloko-column_container.bloko-column_xs-4.bloko-column_m-8.bloko-column_l-11 > div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-11 > div.bloko-gap.bloko-gap_top.bloko-gap_bottom > div > div.bloko-gap.bloko-gap_top > div > div > div > div:nth-child(1) > span > button")))
         print("Появилось, жмаю!")
-        driver.find_element_by_xpath('/html/body/div[5]/div/div[3]/div[1]/div/div/div[1]/div[3]/div[2]/div/div[6]/div/div/div/div[1]/span/button').click
+        driver.find_element_by_css_selector("#HH-React-Root > div > div.HH-MainContent.HH-Supernova-MainContent > div.main-content > div > div > div.bloko-column.bloko-column_container.bloko-column_xs-4.bloko-column_m-8.bloko-column_l-11 > div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-11 > div.bloko-gap.bloko-gap_top.bloko-gap_bottom > div > div.bloko-gap.bloko-gap_top > div > div > div > div:nth-child(1) > span > button").click()
         driver.refresh()
+        os.system('cls')
+        print("Ожидаем.")
     except TimeoutException:
         print("Ожидаем.")
 
